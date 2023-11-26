@@ -43,7 +43,6 @@ pipeline.start(config)
 #############################
 # 运行段
 #############################
-
 try:
     while True:
         ##############################
@@ -57,14 +56,12 @@ try:
 
         # Convert images to numpy arrays
         color_image = np.asanyarray(color_frame.get_data())
-        color_colormap_dim = color_image.shape
-
-        # Show images
-        cv2.namedWindow('RealSense', cv2.WINDOW_AUTOSIZE)
-        cv2.imshow('RealSense', color_image)
+        
+        
         key = cv2.waitKey(1)
         if key == 27:
             break
+
 
 finally:
 
